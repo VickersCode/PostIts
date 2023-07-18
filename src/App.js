@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 
@@ -6,7 +5,7 @@ function App() {
   return (
     <div>  
       <div className="App">
-        <Square />
+        <ColorfulSquare />
         <Square />
       </div>
       <div className='App'>
@@ -17,7 +16,7 @@ function App() {
   );
 }
 
-const Square = () => {
+const ColorfulSquare = () => {
   const [color, setColor] = useState('yellow');
 
   const changeColor = () => {
@@ -44,10 +43,21 @@ const Square = () => {
     margin: '10px'
   };
 
-  return <div style={squareStyle} onClick={changeColor}></div>;
+    return <div style={squareStyle} onClick={changeColor}></div>;
 }
 
+const Square = () => {
+  const squareStyle = {
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100px',
+    backgroundColor: 'yellow',
+    height: '100px',
+    margin: '10px'
+  };
 
+  return <div style={squareStyle}></div>;
+}
 
 
 export default App;
