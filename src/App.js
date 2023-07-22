@@ -6,7 +6,7 @@ function App() {
     <div>  
       <div className="App">
         <ColorfulSquare />
-        <Square />
+        <SpinningSquare />
       </div>
       <div className='App'>
         <Square />
@@ -46,18 +46,12 @@ const ColorfulSquare = () => {
     return <div style={squareStyle} onClick={changeColor}></div>;
 }
 
-const Square = () => {
-  const squareStyle = {
-    display: 'flex',
-    flexDirection: 'row',
-    width: '100px',
-    backgroundColor: 'yellow',
-    height: '100px',
-    margin: '10px'
-  };
-
-  return <div style={squareStyle}></div>;
+const SpinningSquare = () => {
+  return <div className="squareStyle"></div>;
 }
 
+const Square = () => {
+  return <div className="squareStyle"></div>;
+}
 
 export default App;
