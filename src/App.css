@@ -4,11 +4,25 @@
   flex-direction: row;
 }
 
-squareStyle  {
+.squareStyle  {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100px;
   background-color: yellow;
   height: 100px;
   margin: 10px;
-};
+}
+
+.spin {
+  animation: spinAnimation 1s linear infinite;
+}
+
+
+@keyframes spinAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

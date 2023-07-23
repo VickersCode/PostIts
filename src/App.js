@@ -34,20 +34,26 @@ const ColorfulSquare = () => {
     return color;
   }
 
-  const squareStyle = {
-    display: 'flex',
-    flexDirection: 'row',
-    width: '100px',
+  const randomStyle = {
+
     backgroundColor: color,
-    height: '100px',
-    margin: '10px'
+
   };
 
-    return <div style={squareStyle} onClick={changeColor}></div>;
+    return <div className='squareStyle' style={randomStyle} onClick={changeColor}></div>;
 }
 
 const SpinningSquare = () => {
-  return <div className="squareStyle"></div>;
+  const [isSpinning, setIsSpinning] = useState(false);
+
+  const handleClick = () => {
+    setIsSpinning(!isSpinning);
+  };
+
+
+
+  return <div className={`squareStyle ${isSpinning ? 'spin' : ''}`} 
+              onClick={handleClick}></div>;
 }
 
 const Square = () => {
