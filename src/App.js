@@ -9,7 +9,7 @@ function App() {
         <SpinningSquare />
       </div>
       <div className='App'>
-        <Square />
+        <FadeSquare />
         <Square />
       </div>
     </div>
@@ -53,6 +53,20 @@ const SpinningSquare = () => {
 
 
   return <div className={`squareStyle ${isSpinning ? 'spin' : ''}`} 
+              onClick={handleClick}></div>;
+}
+
+const FadeSquare = () => {
+  const [fade, setFade] = useState(false);
+
+  const handleClick = () => {
+    setFade(true);
+    setTimeout(() => {
+      setFade(false);
+    }, 10000);
+  };
+
+  return <div className={`squareStyle ${fade ? 'fade' : ''}`}
               onClick={handleClick}></div>;
 }
 

@@ -17,6 +17,12 @@
   animation: spinAnimation 1s linear infinite;
 }
 
+.fade {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
 
 @keyframes spinAnimation {
   from {
